@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isFibonacci(n) {
+        let fibona = 3;
+        let fibonacc = 3;
+        let newFibona = 0;
+        if (n < 3) {
+            return false;
+        }
+        if (n == 3) {
+            return true;
+        }
+        while (newFibona <= n) {
+            newFibona = fibona + fibonacc;
+            fibona = fibonacc;
+            fibonacc = newFibona;
+            if (newFibona == n) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    document.write(isFibonacci(3));
+</script>
+</body>
+</html>
